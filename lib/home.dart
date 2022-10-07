@@ -13,16 +13,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Container(
         alignment: Alignment.bottomCenter,
-        margin: EdgeInsets.only(bottom: 30),
+        margin: const EdgeInsets.only(bottom: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
               onPressed: () {},
-              child: Text(
-                "/",
-                style: TextStyle(color: Colors.white),
-              ),
+              child: Icon(Icons.arrow_back),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
                     const Color.fromARGB(255, 39, 39, 40)),
@@ -33,10 +30,7 @@ class _HomeState extends State<Home> {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text(
-                "\\",
-                style: TextStyle(color: Colors.white),
-              ),
+              child: Icon(Icons.arrow_forward),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
                     const Color.fromARGB(255, 39, 39, 40)),
