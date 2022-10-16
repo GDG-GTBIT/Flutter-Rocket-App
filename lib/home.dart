@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +13,22 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Rocket App",
+          style: TextStyle(fontFamily: 'oswald', fontSize: 50),
+        ),
+        centerTitle: true,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.account_box_rounded)),
+        ],
+        flexibleSpace: Container(color: Colors.black),
+        bottom: PreferredSize(
+          child: Container(color: Colors.black),
+          preferredSize: Size(double.infinity, 20),
+        ),
+      ),
       body: Stack(
         children: [
           Center(
