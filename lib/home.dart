@@ -31,6 +31,25 @@ class _HomeState extends State<Home> {
       ),
       body: Stack(
         children: [
+          Positioned(
+            child: Container(
+              width: 350,
+              child: Center(
+                child: SizedBox(
+                  width: 300,
+                  height: 30,
+                  child: TextField(
+                      decoration: InputDecoration(
+                          labelText: "Enter text",
+                          contentPadding: EdgeInsets.all(5),
+                          border: OutlineInputBorder())),
+                ),
+              ),
+            ),
+            top: 50,
+            left: 15,
+          ),
+
           Center(
             child: Container(
               width: 500,
