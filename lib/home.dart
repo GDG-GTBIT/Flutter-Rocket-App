@@ -49,10 +49,10 @@ class _HomeState extends State<Home> {
             top: 50,
             left: 15,
           ),
-
           Center(
             child: Container(
               width: 500,
+              margin: EdgeInsets.all(10),
               height: 500,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(25)),
@@ -78,11 +78,14 @@ class _HomeState extends State<Home> {
                     onPressed: () {},
                     child: Text(
                       "<-",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          const Color.fromARGB(255, 39, 39, 40)),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      backgroundColor: Colors.black,
+                      minimumSize: Size(100, 50),
                     ),
                   ),
                   const SizedBox(
@@ -92,11 +95,14 @@ class _HomeState extends State<Home> {
                     onPressed: () {},
                     child: Text(
                       "->",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          const Color.fromARGB(255, 39, 39, 40)),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      backgroundColor: Colors.black,
+                      minimumSize: Size(100, 50),
                     ),
                   ),
                 ],
