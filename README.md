@@ -1,4 +1,4 @@
-# rocket_app
+# Rocket_app
 Hi Everyone
 A new Flutter project.
 
@@ -15,3 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 An api to collect data of worldwide launch vehicles which includes attributes likes company's name, payload, thrust power, images, country, previous missions and so on.
+
+## Abouttheteam
+This app is created by app development team of gdsc to know about the upcoming rocket launches.The tech stack used here was flutter and cupertino syle has been used.
