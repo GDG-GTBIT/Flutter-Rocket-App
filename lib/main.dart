@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart.';
-import './pages/page-2.dart';
+import 'pages/page-3.dart';
 
 void main() => runApp(const MyApp());
 
