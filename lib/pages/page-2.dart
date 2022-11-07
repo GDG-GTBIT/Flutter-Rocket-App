@@ -1,6 +1,8 @@
 import 'dart:html';
+import 'dart:ui';
 
 import 'package:flutter/cupertino.dart.';
+import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 class PageTwo extends StatefulWidget {
@@ -32,13 +34,14 @@ class _PageTwoState extends State<PageTwo> {
                 Positioned(
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 55,
                       ),
                       GlassmorphicContainer(
+                        margin: const EdgeInsets.only(bottom: 45),
                         width: 170,
                         height: 270,
-                        borderRadius: 20,
+                        borderRadius: 30,
                         blur: 30,
                         alignment: Alignment.center,
                         border: 2,
@@ -46,8 +49,8 @@ class _PageTwoState extends State<PageTwo> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Color(0xFFffffff).withOpacity(0.1),
-                              Color(0xFFFFFFFF).withOpacity(0.05),
+                              const Color(0xFFffffff).withOpacity(0.1),
+                              const Color(0xFFFFFFFF).withOpacity(0.05),
                             ],
                             stops: [
                               0.1,
@@ -57,11 +60,52 @@ class _PageTwoState extends State<PageTwo> {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Color.fromARGB(255, 53, 213, 45).withOpacity(0.5),
-                            Color.fromARGB(255, 6, 54, 4).withOpacity(0.5),
+                            const Color.fromARGB(255, 53, 213, 45)
+                                .withOpacity(0.5),
+                            const Color.fromARGB(255, 6, 54, 4)
+                                .withOpacity(0.5),
                           ],
                         ),
                         child: null,
+                      ),
+                      const Text(
+                        'LOREM IPSUM',
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      Row(
+                        children: [
+                          CupertinoButton(
+                            color: const Color.fromARGB(88, 255, 255, 255),
+                            onPressed: () {},
+                            child: const Icon(Icons.newspaper),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          CupertinoButton(
+                            color: const Color.fromARGB(88, 255, 255, 255),
+                            onPressed: () {},
+                            child: const Icon(Icons.play_circle),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 20),
+                        height: 700,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(70, 255, 255, 255),
+                          border: Border.all(color: Colors.transparent),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                        ),
                       ),
                     ],
                   ),
