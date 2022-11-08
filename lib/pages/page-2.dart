@@ -51,6 +51,7 @@ class _PageTwoState extends State<PageTwo> {
               child: Image.asset('assets/star1.png'),
             ),
             Positioned(
+              top: _l3speed*_scrolloffset*-1*1,
               height: screensize.height * 1.5,
               child: Container(
                 width: screensize.width,
@@ -120,19 +121,22 @@ class _PageTwoState extends State<PageTwo> {
                     ),
                     
                      // top: screensize.height + (_scrolloffset * -1 * 1),
-                       Container(
-                        margin: EdgeInsets.only(top: 20),
-                        height: 300,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(70, 255, 255, 255),
-                          border: Border.all(
-                              color: const Color.fromARGB(0, 0, 0, 0)),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(30),
+                       Positioned(
+                         top: screensize.height + (_l3speed*_scrolloffset * -1 * 1),
+                         child: Container(
+                          margin: EdgeInsets.only(top: 20),
+                          height: screensize.height*0.7,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(70, 255, 255, 255),
+                            border: Border.all(
+                                color: const Color.fromARGB(0, 0, 0, 0)),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(30),
+                            ),
                           ),
-                        ),
-                      ),
+                                             ),
+                       ),
                     
                   ],
                 ),
