@@ -66,7 +66,7 @@ class _PageTwoState extends State<PageTwo> {
                       width: 170,
                       height: 270,
                       borderRadius: 30,
-                      blur: 30,
+                      blur: 31,
                       alignment: Alignment.center,
                       border: 2,
                       linearGradient: LinearGradient(
