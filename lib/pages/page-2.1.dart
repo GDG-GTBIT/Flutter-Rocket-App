@@ -55,7 +55,7 @@ class _Page2State extends State<Page2> {
                   width: 250,
                   height: 350,
                   borderRadius: 30,
-                  blur: 31,
+                  blur: 30,
                   alignment: Alignment.center,
                   border: 2,
                   linearGradient: LinearGradient(
