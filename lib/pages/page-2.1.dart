@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
@@ -34,8 +33,8 @@ class _Page2State extends State<Page2> {
     var size = MediaQuery.of(context).size;
     var heigt = size.height * 2;
 
-    return Scaffold(
-      body: Container(
+    return CupertinoPageScaffold(
+      child: Container(
         color: const Color.fromARGB(255, 2, 3, 12),
         child: Stack(children: [
           Positioned(
