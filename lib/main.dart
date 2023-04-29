@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import './pages/page-2.dart';
-import 'pages/page-2.1.dart';
+import 'package:flutter/cupertino.dart.';
+import 'package:rocket_app/pages/page-2.1.dart';
+import 'pages/page-3.dart';
 
 void main() => runApp(const MyApp());
 
