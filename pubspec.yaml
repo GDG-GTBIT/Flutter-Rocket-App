@@ -70,6 +70,7 @@ flutter:
     - assets/image5.png
     - assets/bg.png
     - assets/Bottom_Navigation_Bar.png
+    - assets/Bottom_Navigation_Bar_1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
