@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:glassmorphism/glassmorphism.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({super.key});
@@ -28,13 +30,24 @@ class _Page2State extends State<Page2> {
     });
   }
 
+  List<String> items = [
+    'Date',
+    'Varient',
+    'Description',
+    'Mission',
+    'Mission Description',
+    'Service Provider',
+    'Location',
+    'Orbit'
+  ];
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var height = size.height * 2;
 
-    return CupertinoPageScaffold(
-      child: Container(
+    return Scaffold(
+      body: Container(
         color: const Color.fromARGB(255, 2, 3, 12),
         child: Stack(
           children: [
@@ -51,18 +64,28 @@ class _Page2State extends State<Page2> {
             Positioned(
               top: size.height + (offset * -1 * 1),
               child: Container(
-                alignment: Alignment.center,
-                width: size.width,
-                height: height,
-                color: const Color.fromARGB(82, 255, 255, 255),
-                child: Column(
-                  children: const [
-                    Text('Date'),
-                    Text('Varient'),
-                    Text('Description'),
-                  ],
-                ),
-              ),
+                  alignment: Alignment.center,
+                  width: size.width,
+                  height: height,
+                  color: const Color.fromARGB(82, 255, 255, 255),
+                  // child: Column(
+                  //   children: const [
+                  //     Text('Date'),
+                  //     Text('Varient'),
+                  //     Text('Description'),
+                  //   ],
+                  // ),
+                  child: ListView.builder(
+                    itemCount: items.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(
+                          items[index],
+                          style: GoogleFonts.inter(),
+                        ),
+                      );
+                    },
+                  )),
             ),
             Positioned.fill(
               child: SingleChildScrollView(
@@ -107,9 +130,9 @@ class _Page2State extends State<Page2> {
                       const SizedBox(
                         height: 45,
                       ),
-                      const Text(
+                      Text(
                         'LOREM IPSUM',
-                        style: TextStyle(
+                        style: GoogleFonts.inter(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: CupertinoColors.white),
