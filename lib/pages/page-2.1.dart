@@ -38,13 +38,25 @@ class _Page2State extends State<Page2> {
     'Mission Description',
     'Service Provider',
     'Location',
-    'Orbit'
+    'Orbit',
+    ' '
+  ];
+  List<String> headings = [
+    'Date: ',
+    'Varient: ',
+    'Description: ',
+    'Mission: ',
+    'Mission Description: ',
+    'Service Provider: ',
+    'Location: ',
+    'Orbit: ',
+    ' ',
   ];
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var height = size.height * 2;
+    var height = size.height * 2.5;
 
     return Scaffold(
       body: Container(
@@ -60,38 +72,59 @@ class _Page2State extends State<Page2> {
                 bottom: offset * 0.5,
                 right: 0,
                 left: 0,
-                child: Image.asset('assets/star1.png')),
+                child: Image.asset(
+                  'assets/star1.png',
+                  fit: BoxFit.fill,
+                )),
+            // Positioned(bottom: 90, child: Image.asset('assets/Bottom_Navigation_Bar.png')),
             Positioned(
               top: size.height + (offset * -1 * 1),
-              child: Container(
-                  alignment: Alignment.center,
-                  width: size.width,
-                  height: height,
-                  color: const Color.fromARGB(82, 255, 255, 255),
-                  // child: Column(
-                  //   children: const [
-                  //     Text('Date'),
-                  //     Text('Varient'),
-                  //     Text('Description'),
-                  //   ],
-                  // ),
-                  child: ListView.builder(
-                    itemCount: items.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(
-                          items[index],
-                          style: GoogleFonts.inter(),
-                        ),
-                      );
-                    },
-                  )),
+              height: size.height * 1,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                child: Container(
+                    alignment: Alignment.center,
+                    width: size.width * 0.9,
+                    height: size.height * 2,
+                    decoration: const BoxDecoration(
+                        color: Color.fromARGB(34, 255, 255, 255),
+                        borderRadius: BorderRadius.all(Radius.circular(30))),
+                    // child: Column(
+                    //   children: const [
+                    //     Text('Date'),
+                    //     Text('Varient'),
+                    //     Text('Description'),
+                    //   ],
+                    // ),
+                    child: ListView.builder(
+                      itemCount: items.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(
+                            headings[index],
+                            style: GoogleFonts.inter(color: Colors.white),
+                          ),
+                          subtitle: Text(
+                            items[index],
+                            style: GoogleFonts.inter(color: Colors.white),
+                          ),
+                        );
+                      },
+                    )),
+              ),
             ),
+            Positioned(
+                right: 1,
+                left: 1,
+                bottom: 0,
+                child: Image.asset('assets/Bottom_Navigation_Bar.png')),
+
             Positioned.fill(
               child: SingleChildScrollView(
                 controller: mainScroll,
                 child: SizedBox(
-                  height: height,
+                  height: height * 0.9,
                   child: Column(
                     children: [
                       const SizedBox(
