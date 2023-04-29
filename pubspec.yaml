@@ -41,6 +41,8 @@ dependencies:
   http: ^0.13.5
   cherry_toast: ^1.2.0
   google_fonts: ^4.0.4
+  svg_path_parser: ^1.1.1
+
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +71,9 @@ flutter:
     - assets/star1.png
     - assets/image5.png
     - assets/bg.png
+    - assets/Vector_2.png
+    - assets/rockett.png
+    - assets/planet.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

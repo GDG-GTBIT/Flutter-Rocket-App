@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart.';
+import 'package:rocket_app/pages/home.dart';
 import 'package:rocket_app/pages/page-1.dart';
 import 'package:rocket_app/pages/page-2.1.dart';
 import 'pages/page-3.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Page2(),
+        home: HomePage(),
       ),
     );
   }
