@@ -44,7 +44,7 @@ class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var height = size.height * 2;
+    var height = size.height*2;
 
     return Scaffold(
       body: Container(
@@ -55,18 +55,19 @@ class _Page2State extends State<Page2> {
                 bottom: offset * 0.3,
                 right: 0,
                 left: 0,
-                child: Image.asset('assets/image5.png')),
+                child:  Image.asset('assets/image5.png')),
             Positioned(
                 bottom: offset * 0.5,
                 right: 0,
                 left: 0,
-                child: Image.asset('assets/star1.png')),
+                child: Image.asset('assets/star1.png',fit: BoxFit.fill,)),
+                // Positioned(bottom: 90, child: Image.asset('assets/Bottom_Navigation_Bar.png')),
             Positioned(
               top: size.height + (offset * -1 * 1),
               child: Container(
                   alignment: Alignment.center,
                   width: size.width,
-                  height: height,
+                  height: size.height*0.5,
                   color: const Color.fromARGB(82, 255, 255, 255),
                   // child: Column(
                   //   children: const [
@@ -87,11 +88,14 @@ class _Page2State extends State<Page2> {
                     },
                   )),
             ),
+            Positioned(bottom: 0, child: Image.asset('assets/Bottom_Navigation_Bar.png')),
+            
             Positioned.fill(
               child: SingleChildScrollView(
+
                 controller: mainScroll,
                 child: SizedBox(
-                  height: height,
+                  height: height*0.9,
                   child: Column(
                     children: [
                       const SizedBox(

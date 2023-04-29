@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart.';
+import 'package:flutter/cupertino.dart';
 import 'package:rocket_app/pages/page-1.dart';
 import 'package:rocket_app/pages/page-2.1.dart';
 import 'pages/page-3.dart';
