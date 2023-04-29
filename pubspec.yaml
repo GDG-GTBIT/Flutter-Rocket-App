@@ -76,6 +76,14 @@ flutter:
     - assets/planet.jpg
     - assets/Bottom_Navigation_Bar.png
     - assets/Bottom_Navigation_Bar_1.png
+    - assets/Date.png
+    - assets/Variant.png
+    - assets/Description.png
+    - assets/Mission.png
+    - assets/Mission_Description.png
+    - assets/Service_Provider.png
+    - assets/Location.png
+    - assets/Orbit.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
