@@ -32,6 +32,17 @@ class _Page2State extends State<Page2> {
     });
   }
 
+  List<Image> images = [
+    Image.asset('assets/Date.png'),
+    Image.asset('assets/Variant.png'),
+    Image.asset('assets/Description.png'),
+    Image.asset('assets/Mission.png'),
+    Image.asset('assets/Mission_Description.png'),
+    Image.asset('assets/Service_Provider.png'),
+    Image.asset('assets/Location.png'),
+    Image.asset('assets/Orbit.png'),
+  ];
+
   List<String> items = [
     'Date',
     'Varient',
@@ -41,7 +52,6 @@ class _Page2State extends State<Page2> {
     'Service Provider',
     'Location',
     'Orbit',
-    ' '
   ];
   List<String> headings = [
     'Date: ',
@@ -52,7 +62,6 @@ class _Page2State extends State<Page2> {
     'Service Provider: ',
     'Location: ',
     'Orbit: ',
-    ' ',
   ];
 
   @override
@@ -86,7 +95,7 @@ class _Page2State extends State<Page2> {
               height: size.height * 1,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: Container(
                     alignment: Alignment.center,
                     width: size.width * 0.9,
@@ -105,6 +114,7 @@ class _Page2State extends State<Page2> {
                       itemCount: items.length,
                       itemBuilder: (context, index) {
                         return ListTile(
+                          leading: images[index],
                           title: Text(
                             headings[index],
                             style: GoogleFonts.inter(color: Colors.white),
