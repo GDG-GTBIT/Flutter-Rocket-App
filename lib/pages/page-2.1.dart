@@ -3,6 +3,8 @@ import 'package:glassmorphism/glassmorphism.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../models/rocket_modal.dart';
+
 class Page2 extends StatefulWidget {
   const Page2({super.key});
 
@@ -57,6 +59,8 @@ class _Page2State extends State<Page2> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var height = size.height * 2.5;
+    RocketModal data =
+        ModalRoute.of(context)!.settings.arguments as RocketModal;
 
     return Scaffold(
       body: Container(
